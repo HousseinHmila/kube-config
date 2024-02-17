@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: kube-argo
+  name: kube-argo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kube-argo
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: kube-argo
+    spec:
+      containers:
+      - image: housseinhmila/kube-argo:app-3
+        name: kube-argo
+        ports:
+        - containerPort: 5000
+        resources: {}
+status: {}

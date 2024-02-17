@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: kube-argo
+  name: kube-argo
+spec:
+  ports:
+  - port: 8080
+    protocol: TCP
+    targetPort: 5000
+  selector:
+    app: kube-argo
+  type: NodePort
+status:
+  loadBalancer: {}
