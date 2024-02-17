@@ -18,7 +18,7 @@ spec:
         app: kube-argo
     spec:
       containers:
-      - image: housseinhmila/kube-argo:app-4
+      - image: housseinhmila/kube-argo:app-5
         name: kube-argo
         ports:
         - containerPort: 5000
